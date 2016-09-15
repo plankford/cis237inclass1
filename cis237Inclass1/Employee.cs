@@ -39,9 +39,13 @@ namespace cis237Inclass1
         //*******************************
         // Public Methods
         //*******************************
+
+        // Using the override keyword. the method will override the automagic one that
+        // comes with every single object that is created
         public override string ToString()   // this is replacing the ToString method that comes with the class with this new one
         {
             // "this" will refer to anything that is defined in the class
+            //  it is used to reference "this" class and objects that are created at this level
             return this._firstName + " " + this._lastName;
         }
 
@@ -52,7 +56,7 @@ namespace cis237Inclass1
 
         //******************************
         // Constructor
-        //******************************
+        //******************************       
         public Employee(string firstName, string lastName, decimal weeklySalary)
         {
             this._firstName = firstName;
@@ -60,6 +64,10 @@ namespace cis237Inclass1
             this._weeklySalary = weeklySalary;
         }
 
+        /* A empty contructor. We must add it back in because as soon as a constructor is added
+         * in a class. the empty default constructor is no linger available. We are required to write
+         * it ourselves if we want it.
+         * */
         public Employee()
         {
             //Do Nothing
